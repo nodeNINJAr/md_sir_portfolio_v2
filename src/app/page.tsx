@@ -8,6 +8,8 @@ import { ContactForm } from "./ContactForm";
 import { EnvironmentalProjects } from "./EnvironmentalProjects";
 import { PlantScholar } from "./PlantScholar";
 import { Leadership } from "./Leadership";
+import { BPSLeadership } from "./BPSLeadership";
+import { MobileSectionLinks } from "./MobileSectionLinks";
 import { Engagements } from "./Engagements";
 import { awardPhotos, experienceLogos, groupedPublications } from "@/lib/portfolio";
 import { srclLeadership } from "@/lib/initiatives";
@@ -26,6 +28,9 @@ export default function PortfolioV2() {
       <Hero />
 
       <main id="main-content">
+        <MobileSectionLinks />
+        <BPSLeadership />
+        <Leadership />
         <section id="about" className={styles.section} aria-labelledby="about-title">
           <div className={`${styles.container} ${styles.aboutGrid}`}>
             <div className={styles.portrait}>
@@ -87,8 +92,6 @@ export default function PortfolioV2() {
             <EnvironmentalProjects />
           </div>
         </section>
-
-        <Leadership />
 
         <section id="honors" className={styles.section} aria-labelledby="honors-title">
           <div className={styles.container}>

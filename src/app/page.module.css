@@ -195,10 +195,10 @@
 .leadershipRole h3 span { display:block; font-family:var(--font-inter),Arial,sans-serif; font-size:23px; margin-top:12px; }
 .leadershipName { font-weight:600; margin-top:20px; }
 .leadershipRole > p:last-child { font-size:18px; line-height:1.8; }
-.bpsRole { display:grid; grid-template-columns:.7fr 1.3fr; align-items:center; gap:50px; margin-top:60px; padding-top:45px; border-top:1px solid #ffffff30; }
+.bpsRole { display:grid; grid-template-columns:.7fr 1.3fr; align-items:center; gap:50px; }
 .bpsImage { display:block; width:100%; height:auto; border-radius:3px; }
 .bpsRole .eyebrow { color:#d4ddb8; }
-.bpsRole h3 { font-size:38px; font-weight:400; color:#fcfbf7; }
+.bpsRole h2 { font-size:38px; font-weight:400; color:#fcfbf7; }
 .bpsOrganization { margin-top:12px; font-size:23px; color:#d6dfcb; }
 .bpsDescription { margin-top:20px; color:#d6dfcb; font-size:17px; line-height:1.8; }
 @media(max-width:767px) { .bpsRole { grid-template-columns:1fr; gap:30px; } .bpsImage { max-width:450px; } }
@@ -278,3 +278,20 @@
 .youthGallery figcaption svg { flex-shrink:0; }
 @media(max-width:767px) { .youthGallery { grid-template-columns:1fr; gap:25px; } }
 @media(max-width:639px) { .currentLeadership { grid-template-columns:1fr; gap:20px; padding:24px; } }
+.partnerHighlight {
+  background: #fff3b0;
+  color: #203c30;
+  padding: 0.125em 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mobileSectionLinks { display:none; }
+@media (max-width:767px) {
+  .mobileSectionLinks { position:sticky; top:100px; z-index:40; display:flex; overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:none; padding:8px; background:#f6f6ee; box-shadow:0 4px 14px rgb(33 76 59 / 14%); }
+  .mobileSectionLinks::-webkit-scrollbar { display:none; }
+  .mobileSectionLinks a { flex:0 0 auto; display:flex; align-items:center; justify-content:center; min-width:112px; min-height:48px; padding:12px 20px; background:#edf4e9; color:#214c3b; font-size:13px; font-weight:600; text-decoration:none; }
+  .mobileSectionLinks a[aria-current="location"] { background:#6AC774; color:#102b17; }
+  .mobileSectionLinks a:focus-visible { outline:2px solid #6AC774; outline-offset:-3px; }
+}
+

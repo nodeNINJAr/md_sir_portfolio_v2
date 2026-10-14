@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { bpsLeadership, leadership } from "@/lib/initiatives";
+import { leadership } from "@/lib/initiatives";
 import { site } from "@/lib/data";
 import styles from "./page.module.css";
 
@@ -19,18 +19,7 @@ export function Leadership() {
           {leadership.contributions.length > 0 && <ul>{leadership.contributions.map((item) => <li key={item.title}><h4>{item.title}</h4><p>{item.description}</p>{item.href && <a href={item.href} target="_blank" rel="noopener noreferrer">View contribution</a>}</li>)}</ul>}
         </article>
       </div>
-      <article className={styles.bpsRole} aria-labelledby="bps-title">
-        <a href={bpsLeadership.image} target="_blank" rel="noopener noreferrer" aria-label="View BPS election announcement (opens in a new tab)">
-          <Image src={bpsLeadership.image} alt={bpsLeadership.alt} width={1440} height={1440} sizes="(min-width: 900px) 430px, 90vw" className={styles.bpsImage} />
-        </a>
-        <div>
-          <p className={styles.eyebrow}>Documented election announcement</p>
-          <h3 id="bps-title">{bpsLeadership.role}</h3>
-          <p className={styles.bpsOrganization}>{bpsLeadership.organization}</p>
-          <p className={styles.leadershipName}>{site.name}</p>
-          <p className={styles.bpsDescription}>{bpsLeadership.description}</p>
-        </div>
-      </article>
+
       </div>
     </section>
   );

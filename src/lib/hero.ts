@@ -8,6 +8,7 @@ export const heroSlides = [
     label: "Professional engagement",
     heading: site.name,
     tagline: "Environmentalist | Senior Environmental Specialist | Managing Director, SRCL",
+    leadership: "President, Bangladesh Poribeshbid Society (BPS)",
     description: "Connecting environmental science, climate resilience, and practical solutions for a more sustainable future.",
     position: "90% 65%",
   },

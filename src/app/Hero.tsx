@@ -48,6 +48,7 @@ export function Hero() {
       <div className={styles.content}>
         <h1 id="v2-title">{currentSlide.heading}</h1>
         <p className={styles.role}>{currentSlide.tagline}</p>
+        {"leadership" in currentSlide && <p className={`${styles.role} ${styles.leadershipBadge}`}>{currentSlide.leadership}</p>}
         <p className={styles.introduction}>{currentSlide.description}</p>
         <div className={styles.actions}>
           <a className={styles.primary} href={site.cvHref} download>Download CV <Download size={18} aria-hidden="true" /></a>

@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 
 export function PlantScholar() {
   const profile = plantScholar;
+  const highlightedPhrase = "Germany-based company headquartered in Darmstadt";
+  const partnerDescription = plantScholarPartner.description.split(highlightedPhrase);
   const topics = [
     ["Purpose & objectives", profile.purpose],
     ["Plant & environmental knowledge", profile.knowledge],
@@ -23,7 +25,7 @@ export function PlantScholar() {
             <div className={styles.initiativePartner}>
               <h3>{plantScholarPartner.heading}</h3>
               <p>{plantScholarPartner.agreement}</p>
-              <p>{plantScholarPartner.description}</p>
+              <p>{partnerDescription[0]}{partnerDescription.length > 1 && <><mark className={styles.partnerHighlight}>{highlightedPhrase}</mark>{partnerDescription.slice(1).join(highlightedPhrase)}</>}</p>
               <a className={styles.textLink} href={plantScholarPartner.website} target="_blank" rel="noopener noreferrer">About Spacenus · {plantScholarPartner.location}<ArrowUpRight size={15} aria-hidden="true" /></a>
             </div>
             <div className={styles.initiativeTopics}>{topics.map(([title, content]) => <div key={title}><h3>{title}</h3><p className={content ? undefined : styles.placeholder}>{content ?? "Verified details to be added."}</p></div>)}</div>
