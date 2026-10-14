@@ -195,13 +195,17 @@
 .leadershipRole h3 span { display:block; font-family:var(--font-inter),Arial,sans-serif; font-size:23px; margin-top:12px; }
 .leadershipName { font-weight:600; margin-top:20px; }
 .leadershipRole > p:last-child { font-size:18px; line-height:1.8; }
-.bpsRole { display:grid; grid-template-columns:.7fr 1.3fr; align-items:center; gap:50px; }
-.bpsImage { display:block; width:100%; height:auto; border-radius:3px; }
-.bpsRole .eyebrow { color:#d4ddb8; }
-.bpsRole h2 { font-size:38px; font-weight:400; color:#fcfbf7; }
-.bpsOrganization { margin-top:12px; font-size:23px; color:#d6dfcb; }
-.bpsDescription { margin-top:20px; color:#d6dfcb; font-size:17px; line-height:1.8; }
-@media(max-width:767px) { .bpsRole { grid-template-columns:1fr; gap:30px; } .bpsImage { max-width:450px; } }
+.bpsSection { background:#f6f6ee; border-bottom:1px solid #214c3b18; }
+.bpsRole { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:80px; }
+.bpsCopy { padding-left:28px; border-left:4px solid #62c36d; }
+.bpsRole .eyebrow { color:#426847; font-size:12px; letter-spacing:.12em; }
+.bpsRole h2 { margin-top:18px; font-size:clamp(44px,5vw,72px); font-weight:400; color:#214c3b; letter-spacing:-.035em; }
+.bpsOrganization { margin-top:16px; max-width:520px; font-size:clamp(22px,2.3vw,30px); line-height:1.4; color:#355c41; }
+.bpsDescription { margin-top:20px; max-width:560px; color:#536354; font-size:17px; line-height:1.8; }
+.bpsAnnouncement { width:100%; max-width:460px; justify-self:end; margin:0; padding:14px; background:#fff; border:1px solid #dbe4d5; box-shadow:0 14px 35px rgb(33 76 59 / 9%); }
+.bpsImage { display:block; width:100%; height:auto; }
+.bpsAnnouncement figcaption { padding:14px 4px 2px; font-size:12px; line-height:1.6; color:#536354; }
+@media(max-width:767px) { .bpsRole { grid-template-columns:1fr; gap:35px; } .bpsCopy { padding-left:20px; } .bpsAnnouncement { justify-self:start; } }
 .awardCard { border-radius:2px; background:#f3f1e8; }
 .awardImage { border-radius:2px; }
 .expertiseCard { border-top:2px solid #788b59; border-radius:0; }
