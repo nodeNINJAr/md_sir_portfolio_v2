@@ -11,16 +11,34 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (max-width:767px) {
-  html { scroll-padding-top:180px; }
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 180px;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-inter), Arial, sans-serif;
   font-weight: 400;
 }
 
-p, a, button, input, textarea, select, label, li, dt, dd, summary, figcaption {
+p,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li,
+dt,
+dd,
+summary,
+figcaption {
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
@@ -30,5 +48,7 @@ p, a, button, input, textarea, select, label, li, dt, dd, summary, figcaption {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }

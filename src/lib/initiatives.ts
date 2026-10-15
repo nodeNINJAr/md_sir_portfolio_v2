@@ -16,20 +16,42 @@ export type InitiativeProfile = {
 export const plantScholar: InitiativeProfile = {
   name: "PlantScholar",
   heading: "PlantScholar — Connecting People With Plants and Nature",
-  overview: "PlantScholar (Brikkho Britti) is an SRCL tree-stewardship initiative involving students and young people in planting, sustained care, and monitoring. It launched on 25 June 2026 at Jatiya Press Club, Dhaka, with Abu Jubayer, Managing Director of SRCL, as keynote speaker.",
-  purpose: "Move beyond planting day by giving young participants responsibility for tree care and survival.",
-  knowledge: "Sapling care guidance and species information accompany participation in the programme.",
-  biodiversity: "Tree stewardship connects youth participation with planting, protection, and species-aware monitoring.",
-  features: ["Tree geotagging with species and participant records", "Periodic photographs and care reports through a mobile app", "GIS and SAT-MRV monitoring of survival and growth", "Scholarship recognition for successful care and survival"],
-  value: "The programme combines practical tree care, youth engagement, and environmental monitoring.",
+  overview:
+    "PlantScholar (Brikkho Britti) is an SRCL tree-stewardship initiative involving students and young people in planting, sustained care, and monitoring. It launched on 25 June 2026 at Jatiya Press Club, Dhaka, with Abu Jubayer, Managing Director of SRCL, as keynote speaker.",
+  purpose:
+    "Move beyond planting day by giving young participants responsibility for tree care and survival.",
+  knowledge:
+    "Sapling care guidance and species information accompany participation in the programme.",
+  biodiversity:
+    "Tree stewardship connects youth participation with planting, protection, and species-aware monitoring.",
+  features: [
+    "Tree geotagging with species and participant records",
+    "Periodic photographs and care reports through a mobile app",
+    "GIS and SAT-MRV monitoring of survival and growth",
+    "Scholarship recognition for successful care and survival",
+  ],
+  value:
+    "The programme combines practical tree care, youth engagement, and environmental monitoring.",
   website: "https://www.srclgroup.com/en/impact/plant-scholar",
   screenshot: null,
 };
 
 export const plantScholarPhotos = [
-  { src: "/images/plantscholar/1.jpeg", alt: "Md. Abu Jubayer and attendees holding documents at the PlantScholar signing ceremony", caption: "Group photograph at the signing ceremony" },
-  { src: "/images/plantscholar/2.jpeg", alt: "Md. Abu Jubayer and another representative signing documents at the PlantScholar ceremony", caption: "Signing the agreement" },
-  { src: "/images/plantscholar/3.jpeg", alt: "Attendees gathered around representatives signing PlantScholar documents", caption: "The signing session with attendees" },
+  {
+    src: "/images/plantscholar/1.jpeg",
+    alt: "Md. Abu Jubayer and attendees holding documents at the PlantScholar signing ceremony",
+    caption: "Group photograph at the signing ceremony",
+  },
+  {
+    src: "/images/plantscholar/2.jpeg",
+    alt: "Md. Abu Jubayer and another representative signing documents at the PlantScholar ceremony",
+    caption: "Signing the agreement",
+  },
+  {
+    src: "/images/plantscholar/3.jpeg",
+    alt: "Attendees gathered around representatives signing PlantScholar documents",
+    caption: "The signing session with attendees",
+  },
 ];
 
 // Location verified via https://spacenus.com/imprint; company focus via /about.
@@ -38,8 +60,10 @@ export const plantScholarPartner = {
   name: "Spacenus GmbH",
   location: "Darmstadt, Germany",
   heading: "SRCL × Spacenus — PlantScholar agreement",
-  agreement: "The ceremony photographs document a PlantScholar contract signing between SRCL and Spacenus GmbH.",
-  description: "Spacenus is a Germany-based company headquartered in Darmstadt, developing satellite-based agricultural verification and monitoring, reporting, and verification (MRV) technology.",
+  agreement:
+    "The ceremony photographs document a PlantScholar contract signing between SRCL and Spacenus GmbH.",
+  description:
+    "Spacenus is a Germany-based company headquartered in Darmstadt, developing satellite-based agricultural verification and monitoring, reporting, and verification (MRV) technology.",
   website: "https://spacenus.com/about",
 };
 
@@ -49,14 +73,16 @@ export const srclLeadership = {
   role: "Managing Director",
   status: "Current leadership role",
   website: "https://www.srclgroup.com/en/",
-  description: "A Dhaka-based multidisciplinary environmental research and engineering consultancy working across environmental assessment, geoinformatics, feasibility studies, and infrastructure.",
+  description:
+    "A Dhaka-based multidisciplinary environmental research and engineering consultancy working across environmental assessment, geoinformatics, feasibility studies, and infrastructure.",
 };
 
 // The supplied SRCL announcement documents this election; no term dates are given.
 export const bpsLeadership = {
   role: "President",
   organization: "Bangladesh Poribeshbid Society (BPS)",
-  description: "SRCL’s announcement congratulates Abu Jubayer on his election as President of Bangladesh Poribeshbid Society.",
+  description:
+    "SRCL’s announcement congratulates Abu Jubayer on his election as President of Bangladesh Poribeshbid Society.",
   image: "/images/profile/poribesh_bidh.jpg",
   alt: "SRCL announcement congratulating Abu Jubayer on his election as President of Bangladesh Poribeshbid Society",
 };
@@ -67,7 +93,8 @@ export const leadership = {
   role: "Vice President",
   committee: "BMDF Executive Committee",
   term: "2026–2029",
-  description: "Represents BMDF's Executive Committee for the 2026–2029 term at government, partner, and public events.",
+  description:
+    "Represents BMDF's Executive Committee for the 2026–2029 term at government, partner, and public events.",
   contributions: [] as { title: string; description: string; href?: string }[],
   logo: null as string | null,
   photo: null as { src: string; alt: string } | null,

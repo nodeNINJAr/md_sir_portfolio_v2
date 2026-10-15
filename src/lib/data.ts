@@ -280,9 +280,12 @@ export const caseStudies = [
     organization: "SMEC-AQUA-RCC JV · LGED / ADB",
     location: "Bangladesh",
     period: "April 2016 – March 2017",
-    problem: "Municipal infrastructure planning needed environmental baseline evidence, WASH demand analysis, and coordinated drainage and waste-management inputs.",
-    approach: "As Environmental Specialist, Abu Jubayer gathered baseline data, analysed WASH demand, updated drainage plans, prepared solid-waste plans, and supported environmental clearance processes.",
-    output: "Drainage masterplan updates for 16 municipalities and solid-waste management masterplans for 30 municipalities, alongside environmental baseline and clearance inputs.",
+    problem:
+      "Municipal infrastructure planning needed environmental baseline evidence, WASH demand analysis, and coordinated drainage and waste-management inputs.",
+    approach:
+      "As Environmental Specialist, Abu Jubayer gathered baseline data, analysed WASH demand, updated drainage plans, prepared solid-waste plans, and supported environmental clearance processes.",
+    output:
+      "Drainage masterplan updates for 16 municipalities and solid-waste management masterplans for 30 municipalities, alongside environmental baseline and clearance inputs.",
   },
   {
     title: "Environmental evidence for water-resource decisions",
@@ -290,9 +293,12 @@ export const caseStudies = [
     organization: "IWFM, BUET · University of Southampton",
     location: "Bangladesh",
     period: "January 2013 – December 2014",
-    problem: "Water-resource and development planning required a clearer understanding of groundwater, ecosystem services, and suitable drinking-water technologies.",
-    approach: "As Researcher, Abu Jubayer conducted environmental modelling, groundwater assessments and field visits, prepared GIS maps, and analysed data using SPSS and Excel.",
-    output: "Spatial maps, statistical assessments, and drinking-water technology selection inputs supporting the research team's long-term environmental planning work.",
+    problem:
+      "Water-resource and development planning required a clearer understanding of groundwater, ecosystem services, and suitable drinking-water technologies.",
+    approach:
+      "As Researcher, Abu Jubayer conducted environmental modelling, groundwater assessments and field visits, prepared GIS maps, and analysed data using SPSS and Excel.",
+    output:
+      "Spatial maps, statistical assessments, and drinking-water technology selection inputs supporting the research team's long-term environmental planning work.",
   },
   {
     title: "Technical foundations for a carbon-credit mechanism",
@@ -300,9 +306,12 @@ export const caseStudies = [
     organization: "Palli Karma-Sahayak Foundation (PKSF)",
     location: "Bangladesh · National framework",
     period: "March 2025 – Present",
-    problem: "A national carbon-credit mechanism requires credible accounting, registry arrangements, sectoral methodologies, and alignment with climate policy.",
-    approach: "As Technical Member, Abu Jubayer contributes framework, MRV and registry inputs, reviews carbon-accounting documentation, and supports sectoral assessment, consultation and capacity development.",
-    output: "Ongoing technical inputs to the framework, registry mechanisms and carbon-project methodologies, with documentation review and stakeholder consultation support.",
+    problem:
+      "A national carbon-credit mechanism requires credible accounting, registry arrangements, sectoral methodologies, and alignment with climate policy.",
+    approach:
+      "As Technical Member, Abu Jubayer contributes framework, MRV and registry inputs, reviews carbon-accounting documentation, and supports sectoral assessment, consultation and capacity development.",
+    output:
+      "Ongoing technical inputs to the framework, registry mechanisms and carbon-project methodologies, with documentation review and stakeholder consultation support.",
   },
 ];
 
@@ -345,7 +354,12 @@ export const journey = [
   },
 ];
 
-export const publications: { title: string; venue: string; year: string; href?: string }[] = [
+export const publications: {
+  title: string;
+  venue: string;
+  year: string;
+  href?: string;
+}[] = [
   {
     title:
       "A Study into Causes and Consequences of Waterlogging Problem in Southwestern Bangladesh",
@@ -371,13 +385,15 @@ export const publications: { title: string; venue: string; year: string; href?: 
     year: "2017",
   },
   {
-    title: "Water, Sanitation, and Hygiene for Small Shopkeepers: A Perspective from Bangladesh",
+    title:
+      "Water, Sanitation, and Hygiene for Small Shopkeepers: A Perspective from Bangladesh",
     venue: "JSM Environmental Science & Ecology",
     year: "2017",
     href: "https://doi.org/10.47739/2333-7141/1041",
   },
   {
-    title: "Chronological History and Destruction Pattern of Tornados in Bangladesh",
+    title:
+      "Chronological History and Destruction Pattern of Tornados in Bangladesh",
     venue: "American Journal of Environmental Protection",
     year: "2016",
     href: "https://doi.org/10.11648/j.ajep.20160504.11",
@@ -393,12 +409,14 @@ export const publications: { title: string; venue: string; year: string; href?: 
     year: "2015",
   },
   {
-    title: "Characterization and Management of Solid Waste in Pharmaceutical Companies",
+    title:
+      "Characterization and Management of Solid Waste in Pharmaceutical Companies",
     venue: "WASTE Safe, KUET",
     year: "2013",
   },
   {
-    title: "Waste Management Procedure in Pharmaceutical Companies in Bangladesh",
+    title:
+      "Waste Management Procedure in Pharmaceutical Companies in Bangladesh",
     venue: "ICETCSD, SUST",
     year: "2012",
   },

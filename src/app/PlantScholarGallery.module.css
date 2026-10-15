@@ -1,11 +1,65 @@
-.gallery { position:sticky; top:140px; min-width:0; }
-.frame { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:3px; background:#c9d1ba; }
-.image { object-fit:contain; }
-.gallery figcaption { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; gap:12px; margin-top:16px; font-size:13px; color:#536347; }
-.gallery figcaption a { display:inline-flex; align-items:center; gap:6px; color:#214c3b; text-decoration:underline; text-underline-offset:4px; }
-.thumbnails { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:22px; }
-.thumbnails button { display:block; padding:3px; border:2px solid transparent; border-radius:3px; cursor:pointer; }
-.thumbnails button[aria-pressed="true"] { border-color:#214c3b; }
-.thumbnails img { display:block; width:100%; height:auto; border-radius:1px; }
-.gallery button:focus-visible, .gallery a:focus-visible { outline:3px solid #527b5e; outline-offset:4px; }
-@media(max-width:899px) { .gallery { position:static; } }
+.gallery {
+  position: sticky;
+  top: 140px;
+  min-width: 0;
+}
+.frame {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #c9d1ba;
+}
+.image {
+  object-fit: contain;
+}
+.gallery figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #536347;
+}
+.gallery figcaption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #214c3b;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+.thumbnails button {
+  display: block;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.thumbnails button[aria-pressed="true"] {
+  border-color: #214c3b;
+}
+.thumbnails img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+.gallery button:focus-visible,
+.gallery a:focus-visible {
+  outline: 3px solid #527b5e;
+  outline-offset: 4px;
+}
+@media (max-width: 899px) {
+  .gallery {
+    position: static;
+  }
+}
