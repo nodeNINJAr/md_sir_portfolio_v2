@@ -1,13 +1,15 @@
 .gallery {
-  position: sticky;
-  top: 140px;
+  position: relative;
+  top: auto;
   min-width: 0;
 }
 .frame {
   position: relative;
   aspect-ratio: 4/3;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 4px;
+  border: 8px solid #f7faef;
+  box-shadow: 0 8px 25px #214c3b12;
   background: #c9d1ba;
 }
 .image {

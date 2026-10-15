@@ -13,7 +13,7 @@ export function BPSLeadership() {
       <div className={styles.container}>
         <article className={styles.bpsRole} aria-labelledby="bps-title">
           <div className={styles.bpsCopy}>
-            <p className={styles.eyebrow}>Documented election announcement</p>
+            <p className={styles.eyebrow}>Professional society leadership</p>
             <h2 id="bps-title">{bpsLeadership.role}</h2>
             <p className={styles.bpsOrganization}>
               {bpsLeadership.organization}

@@ -33,13 +33,17 @@ export function EnvironmentalProjects() {
           </button>
         ))}
       </div>
+      <p className={styles.projectImageNote}>
+        Portfolio photographs provide context; they are not verified images of
+        each assignment.
+      </p>
       <p className={styles.resultCount} role="status">
         {visible.length} {visible.length === 1 ? "assignment" : "assignments"}
         {category !== "All"
           ? ` · ${category}`
           : " · Professional consulting and applied research"}
       </p>
-      <div className={styles.cardGrid}>
+      <div className={styles.projectGrid}>
         {visible.map((project) => (
           <article className={styles.projectCard} key={project.title}>
             <div className={styles.cardImage}>
@@ -47,13 +51,11 @@ export function EnvironmentalProjects() {
                 src={project.image}
                 alt=""
                 fill
-                sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 90vw"
+                sizes="(min-width: 1440px) 704px, (min-width: 768px) 46vw, 90vw"
                 className={styles.coverImage}
               />
             </div>
-            <p className={styles.imageCaption}>
-              Image from the wider portfolio
-            </p>
+
             <p className={styles.projectCategory}>{project.categories[0]}</p>
             <h3>{project.title}</h3>
             <dl className={styles.projectMeta}>

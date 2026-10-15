@@ -15,7 +15,10 @@ export function Leadership() {
           <div>
             <p className={styles.eyebrow}>Institutional leadership</p>
             <h2 id="leadership-title">
-              Leadership &amp; Institutional Contributions
+              Leadership &amp;{" "}
+              <span className={styles.headingAccent}>
+                Institutional Contributions
+              </span>
             </h2>
             <p className={styles.leadershipIntro}>
               Public representation alongside environmental consulting,

@@ -61,9 +61,11 @@ export default function PortfolioV2() {
               />
             </div>
             <div className={styles.aboutCopy}>
+              <p className={styles.eyebrow}>The person behind the work</p>
               <h2 id="about-title">
                 An environmentalist working at the intersection of science,
-                people, and nature.
+                people, and{" "}
+                <span className={styles.headingAccent}>nature.</span>
               </h2>
               <p>
                 Md. Abu Jubayer is an environmentalist (পরিবেশবিদ), Senior
@@ -135,7 +137,10 @@ export default function PortfolioV2() {
             <div className={styles.sectionIntro}>
               <p className={styles.eyebrow}>Professional experience</p>
               <h2 id="experience-title">
-                Experience that connects evidence to action.
+                Experience that connects{" "}
+                <span className={styles.headingAccent}>
+                  evidence to action.
+                </span>
               </h2>
               <p>
                 Environmental advisory, applied research, and development
@@ -210,14 +215,16 @@ export default function PortfolioV2() {
             <div className={styles.sectionIntro}>
               <p className={styles.eyebrow}>Environmental work</p>
               <h2 id="projects-title">
-                Professional projects &amp; environmental contributions
+                Professional projects &amp;{" "}
+                <span className={styles.headingAccent}>
+                  environmental contributions
+                </span>
               </h2>
               <p>
                 Consulting and research assignments across environmental
                 management, climate, water, and development planning. These are
                 professional assignments, presented separately from SRCL’s
-                PlantScholar initiative. Portfolio images provide context and
-                are not verified photographs of each assignment.
+                PlantScholar initiative.
               </p>
             </div>
             <EnvironmentalProjects />
@@ -231,13 +238,17 @@ export default function PortfolioV2() {
         >
           <div className={styles.container}>
             <div className={styles.sectionIntro}>
-              <h2 id="honors-title">Honors &amp; Awards</h2>
+              <p className={styles.eyebrow}>Recognition along the way</p>
+              <h2 id="honors-title">
+                Honors &amp;{" "}
+                <span className={styles.headingAccent}>Awards</span>
+              </h2>
               <p>
                 A collection of awards, appreciation plaques, and recognition
                 from environmental and professional engagements.
               </p>
             </div>
-            <div className={styles.cardGrid}>
+            <div className={styles.recognitionGrid}>
               {awardPhotos.map((award) => (
                 <figure className={styles.awardCard} key={award.image}>
                   <a
@@ -272,7 +283,10 @@ export default function PortfolioV2() {
         >
           <div className={styles.container}>
             <div className={styles.sectionIntro}>
-              <h2 id="expertise-title">Areas Of Expertise</h2>
+              <p className={styles.eyebrow}>Knowledge in practice</p>
+              <h2 id="expertise-title">
+                Areas Of <span className={styles.headingAccent}>Expertise</span>
+              </h2>
               <p>
                 Technical support from assessment and planning through
                 implementation, monitoring, and learning.
@@ -305,7 +319,11 @@ export default function PortfolioV2() {
         >
           <div className={styles.container}>
             <div className={styles.sectionIntro}>
-              <h2 id="research-title">Research &amp; Publications</h2>
+              <p className={styles.eyebrow}>Scientific inquiry</p>
+              <h2 id="research-title">
+                Research &amp;{" "}
+                <span className={styles.headingAccent}>Publications</span>
+              </h2>
               <p>
                 Published and ongoing research on water, sanitation,
                 environmental management, and disaster risk.
@@ -360,8 +378,10 @@ export default function PortfolioV2() {
         >
           <div className={styles.container}>
             <div className={styles.sectionIntro}>
+              <p className={styles.eyebrow}>Ideas shared. People connected.</p>
               <h2 id="speaking-title">
-                Knowledge Sharing &amp; Youth Engagements
+                Knowledge Sharing &amp;{" "}
+                <span className={styles.headingAccent}>Youth Engagements</span>
               </h2>
               <p>
                 Bringing environmental knowledge closer to institutions, teams,
@@ -393,8 +413,12 @@ export default function PortfolioV2() {
         >
           <div className={styles.container}>
             <div className={styles.sectionIntro}>
+              <p className={styles.eyebrow}>A foundation for the future</p>
               <h2 id="credentials-title">
-                Education &amp; Professional Development
+                Education &amp;{" "}
+                <span className={styles.headingAccent}>
+                  Professional Development
+                </span>
               </h2>
               <p>
                 The academic foundation and continuing learning behind the
@@ -402,8 +426,11 @@ export default function PortfolioV2() {
               </p>
             </div>
             <div className={styles.cardGrid}>
-              {education.map((item) => (
+              {education.map((item, index) => (
                 <article className={styles.researchCard} key={item.degree}>
+                  <span className={styles.credentialIndex} aria-hidden="true">
+                    0{index + 1}
+                  </span>
                   <h3>{item.degree}</h3>
                   <p>{item.institution}</p>
                 </article>
@@ -437,7 +464,10 @@ export default function PortfolioV2() {
         >
           <div className={`${styles.container} ${styles.contactGrid}`}>
             <div>
-              <h2 id="contact-title">Contact Me</h2>
+              <p className={styles.eyebrow}>Start a conversation</p>
+              <h2 id="contact-title">
+                Contact <span className={styles.headingAccent}>Me</span>
+              </h2>
               <p className={styles.contactLead}>
                 Let’s work together on informed environmental decisions and a
                 more resilient future.
