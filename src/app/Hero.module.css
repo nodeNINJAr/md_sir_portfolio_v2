@@ -369,7 +369,7 @@
     justify-content: center;
   }
   .dots button {
-    min-width: 36px;
+    min-width: 44px;
   }
   .slideCount {
     margin-inline: 5px;
@@ -788,7 +788,7 @@
     padding-bottom: 160px;
   }
   .profileHero .heroCopy {
-    width: 59%;
+    width: 64%;
   }
   .profileHero .natureKicker {
     font-size: 9px;
@@ -800,8 +800,8 @@
   .profileRoles {
     margin-top: 22px;
     padding-left: 18px;
-    font-size: 12px;
-    line-height: 1.65;
+    font-size: 13px;
+    line-height: 1.7;
   }
   .profileHero .introduction {
     margin-top: 20px;
@@ -915,5 +915,11 @@
   }
   .scholarHero .content h1 {
     font-size: clamp(44px, 5.1vw, 82px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .controls .autoplayControl {
+    display: none;
   }
 }

@@ -1648,6 +1648,9 @@
 .textLink svg {
   flex-shrink: 0;
 }
+.button svg {
+  flex-shrink: 0;
+}
 .aboutGrid {
   grid-template-columns: 0.85fr 1.15fr;
   gap: clamp(32px, 6vw, 100px);
@@ -2004,6 +2007,12 @@
   border-top: 3px solid #6f9d64;
   background: #f4f7eb;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.expertiseCard .textLink {
+  margin-top: auto;
+  align-self: flex-start;
 }
 .areaNumber {
   display: inline-flex;
@@ -2314,7 +2323,7 @@
     font-size: 30px;
   }
   .contactGrid h2 {
-    font-size: 58px;
+    font-size: clamp(40px, 12vw, 58px);
   }
   .contactLead {
     font-size: 18px;
@@ -2323,6 +2332,25 @@
     padding: 24px;
     width: calc(100% - 8px);
     box-shadow: 8px 8px 0 #c9dec2;
+  }
+}
+
+/* Keep content and decorative shadows within narrow layouts. */
+.aboutGrid > *,
+.contactGrid > *,
+.currentLeadership > *,
+.initiativeShowcase > *,
+.researchGroup > * {
+  min-width: 0;
+}
+.projectMeta dd,
+.publicationRow h4 {
+  overflow-wrap: anywhere;
+}
+@media (min-width: 640px) and (max-width: 767px) {
+  .currentLeadership {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 @media (prefers-reduced-motion: no-preference) {

@@ -319,26 +319,25 @@ export function Hero() {
         >
           <ChevronRight size={20} aria-hidden="true" />
         </button>
-        {reducedMotion !== true && (
-          <button
-            type="button"
-            onClick={() => {
-              setRotating(!rotating);
-              if (!rotating) setFocused(false);
-            }}
-            aria-label={
-              rotating
-                ? "Pause automatic slideshow"
-                : "Start automatic slideshow"
-            }
-          >
-            {rotating ? (
-              <Pause size={17} aria-hidden="true" />
-            ) : (
-              <Play size={17} aria-hidden="true" />
-            )}
-          </button>
-        )}
+        <button
+          className={styles.autoplayControl}
+          type="button"
+          onClick={() => {
+            setRotating(!rotating);
+            if (!rotating) setFocused(false);
+          }}
+          aria-label={
+            rotating
+              ? "Pause automatic slideshow"
+              : "Start automatic slideshow"
+          }
+        >
+          {rotating ? (
+            <Pause size={17} aria-hidden="true" />
+          ) : (
+            <Play size={17} aria-hidden="true" />
+          )}
+        </button>
       </div>
     </section>
   );

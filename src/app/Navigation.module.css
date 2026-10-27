@@ -38,6 +38,9 @@
 }
 .navigation > a,
 .moreButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
