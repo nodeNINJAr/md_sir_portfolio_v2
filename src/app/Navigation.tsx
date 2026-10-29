@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, Leaf, Menu, X } from "lucide-react";
 import { navLinks, site } from "@/lib/data";
 import styles from "./Navigation.module.css";
 
@@ -9,8 +10,8 @@ const primaryIds = [
   "#summary",
   "#about",
   "#experience",
-  "#projects",
-  "#honors",
+  "#credentials",
+  "/programmes",
 ];
 const primaryLinks = primaryIds.map((href) =>
   navLinks.find((link) => link.href === href)!,
@@ -19,14 +20,15 @@ const moreLinks = [
   ...navLinks.filter((link) => !primaryIds.includes(link.href)),
   { label: "Expertise", href: "#expertise" },
   { label: "Knowledge Sharing & Youth", href: "#speaking" },
-  { label: "Education", href: "#credentials" },
 ];
 
-export function Navigation() {
+export function Navigation({ homePage = true }: { homePage?: boolean }) {
   const [open, setOpen] = useState(false);
   const [drawerMode, setDrawerMode] = useState<"more" | "all">("more");
   const [scrolled, setScrolled] = useState(false);
   const drawer = useRef<HTMLDialogElement>(null);
+  const navigationHref = (href: string) =>
+    !homePage && href.startsWith("#") ? `/${href}` : href;
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 40);
@@ -58,11 +60,11 @@ export function Navigation() {
   return (
     <>
       <header
-        className={`${styles.header} ${scrolled || open ? styles.headerSolid : ""}`}
+        className={`${styles.header} ${!homePage || scrolled || open ? styles.headerSolid : ""}`}
       >
         <div className={styles.navBar}>
-          <a
-            href="#summary"
+          <Link
+            href={navigationHref("#summary")}
             className={styles.brand}
             aria-label={`${site.name} — Home`}
           >
@@ -71,9 +73,11 @@ export function Navigation() {
             </span>
             <span className={styles.brandName}>
               <span>Abu</span>
-              <strong>Jubayer</strong>
+              <strong>
+                Jubaye<span className={styles.leafLetter}>r<Leaf className={styles.brandLeaf} aria-hidden="true" /></span>
+              </strong>
             </span>
-          </a>
+          </Link>
           <button
             className={styles.menuToggle}
             aria-expanded={open && drawerMode === "all"}
@@ -90,9 +94,9 @@ export function Navigation() {
             className={styles.navigation}
           >
             {primaryLinks.map(({ label, href }) => (
-              <a key={href} href={href} onClick={() => setOpen(false)}>
+              <Link key={href} href={navigationHref(href)} aria-current={!homePage && href === "/programmes" ? "page" : undefined} onClick={() => setOpen(false)}>
                 {label}
-              </a>
+              </Link>
             ))}
             <button
               className={styles.moreButton}
@@ -148,9 +152,9 @@ export function Navigation() {
             ? [...primaryLinks, ...moreLinks]
             : moreLinks
           ).map(({ label, href }) => (
-            <a key={href} href={href} onClick={closeDrawer}>
+            <Link key={href} href={navigationHref(href)} aria-current={!homePage && href === "/programmes" ? "page" : undefined} onClick={closeDrawer}>
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
       </dialog>

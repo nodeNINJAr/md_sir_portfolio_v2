@@ -18,6 +18,7 @@ import { Leadership } from "./Leadership";
 import { BPSLeadership } from "./BPSLeadership";
 import { MobileSectionLinks } from "./MobileSectionLinks";
 import { Engagements } from "./Engagements";
+import { ProgrammeSlider } from "./ProgrammeSlider";
 import {
   awardPhotos,
   experienceLogos,
@@ -45,6 +46,7 @@ export default function PortfolioV2() {
         <MobileSectionLinks />
         <BPSLeadership />
         <Leadership />
+        <ProgrammeSlider />
         <section
           id="about"
           className={`${styles.section} ${styles.aboutSection}`}
@@ -80,30 +82,6 @@ export default function PortfolioV2() {
                 spans government initiatives, development projects, applied
                 research, and environmental advisory.
               </p>
-              <p>
-                He currently serves as{" "}
-                <a
-                  className={styles.textLink}
-                  href={srclLeadership.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Managing Director of Sustainable Research and Consultancy Ltd.
-                  (SRCL) <ArrowUpRight size={15} aria-hidden="true" />
-                </a>
-                .
-              </p>
-              <div className={styles.identityTags}>
-                {[
-                  "Environmentalist",
-                  "Environmental & Climate Consultant",
-                  "Green Innovation Advocate",
-                  "Sustainability Professional",
-                  "Environmental Researcher",
-                ].map((label) => (
-                  <span key={label}>{label}</span>
-                ))}
-              </div>
               <a className={styles.button} href="#experience">
                 Explore My Journey <ChevronRight size={17} aria-hidden="true" />
               </a>
@@ -222,9 +200,7 @@ export default function PortfolioV2() {
               </h2>
               <p>
                 Consulting and research assignments across environmental
-                management, climate, water, and development planning. These are
-                professional assignments, presented separately from SRCL’s
-                PlantScholar initiative.
+                management, climate, water, and development planning.
               </p>
             </div>
             <EnvironmentalProjects />
@@ -285,7 +261,8 @@ export default function PortfolioV2() {
             <div className={styles.sectionIntro}>
               <p className={styles.eyebrow}>Knowledge in practice</p>
               <h2 id="expertise-title">
-                Areas Of <span className={styles.headingAccent}>Expertise</span>
+                Areas Of <span className={styles.headingAccent}>Expertise</span>{" "}
+                (Teamwise)
               </h2>
               <p>
                 Technical support from assessment and planning through
@@ -425,12 +402,16 @@ export default function PortfolioV2() {
                 practice.
               </p>
             </div>
-            <div className={styles.cardGrid}>
-              {education.map((item, index) => (
-                <article className={styles.researchCard} key={item.degree}>
-                  <span className={styles.credentialIndex} aria-hidden="true">
-                    0{index + 1}
-                  </span>
+            <div className={`${styles.cardGrid} ${styles.educationGrid}`}>
+              {education.map((item) => (
+                <article className={styles.researchCard} key={`${item.institution}-${item.degree}`}>
+                  <Image
+                    src={item.logo}
+                    alt={`${item.institution} logo`}
+                    width={176}
+                    height={88}
+                    className={styles.educationLogo}
+                  />
                   <h3>{item.degree}</h3>
                   <p>{item.institution}</p>
                 </article>

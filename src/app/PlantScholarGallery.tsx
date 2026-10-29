@@ -35,7 +35,7 @@ export function PlantScholarGallery() {
       <div
         className={styles.thumbnails}
         role="group"
-        aria-label="Choose a PlantScholar signing ceremony photo"
+        aria-label="Choose a PlantScholar event photo"
       >
         {plantScholarPhotos.map((item, index) => (
           <button

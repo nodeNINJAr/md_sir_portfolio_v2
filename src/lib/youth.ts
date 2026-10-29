@@ -12,11 +12,11 @@ export const youthActivities = {
         "Speaking at SRCL’s Youth Sustainability Challenge prize-giving ceremony.",
     },
     {
-      src: "/images/profile/job_fair.jpg",
-      alt: "Md. Abu Jubayer and other attendees at SRCL’s booth at a Stamford University Bangladesh career expo",
+      src: "/images/newimages/Carrier Expo 2026_stamford2.jpg",
+      alt: "Attendees gathered at SRCL’s outdoor booth during the Stamford career expo",
       caption: "At SRCL’s career-fair booth",
       description:
-        "At SRCL’s booth during a career expo at Stamford University Bangladesh.",
+        "At SRCL’s booth during the 2026 career expo at Stamford University Bangladesh.",
     },
     {
       src: "/images/youth activities/2.jpeg",

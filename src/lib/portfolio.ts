@@ -1,29 +1,11 @@
 import { projects, publications } from "./data";
 
 export const experienceLogos = [
-  "/images/organizations/Logo_of_PKSF.svg",
   undefined,
   "/images/organizations/lged.png",
   undefined,
   "/images/organizations/buet.svg",
   "/images/organizations/jica.svg",
-];
-
-// These are portfolio illustrations, rather than photos of each named project.
-export const projectImages = [
-  "/images/story/research-analysis.jpg",
-  "/images/story/selected-projects.jpg",
-  "/images/profile/aerial-drone-survey.jpg",
-  "/images/story/services-advisory.jpg",
-  "/images/story/expertise-notes.jpg",
-  "/images/story/capacity-building.jpeg",
-  "/images/story/kuaa-skill-session.png",
-  "/images/story/projects.jpg",
-  "/images/profile/haor.jpg",
-  "/images/story/selected-projects.jpg",
-  "/images/profile/aerial-drone-survey.jpg",
-  "/images/profile/haor.jpg",
-  "/images/story/projects.jpg",
 ];
 
 export const awardPhotos = [
@@ -58,22 +40,39 @@ export const awardPhotos = [
 
 export const speaking = [
   {
-    title: "Environmental Training",
+    title: "BCDP Knowledge Conference 2026",
     description:
-      "Applied environmental management, safeguards, and compliance.",
-    image: "/images/story/kuaa-skill-session.png",
+      "Conference participation and conversations with fellow attendees.",
+    image: "/images/newimages/BCDP_conf_5.jpg",
+    alt: "Three attendees standing in front of the BCDP Knowledge Conference 2026 backdrop",
   },
   {
-    title: "Climate & Policy Conversations",
+    title: "Climate & Environment Summit · Thailand",
     description:
-      "Knowledge sharing on climate resilience and evidence-based planning.",
-    image: "/images/profile/abu-jubayer-speaking-edited.jpg",
+      "An international gathering around climate and environmental issues.",
+    image: "/images/newimages/climate_and_env_summit_on_thai4.jpg",
+    alt: "Summit attendees posing for a group photograph in a conference hall",
   },
   {
-    title: "Professional Capacity Building",
+    title: "Livestock Services Transformation Workshop",
     description:
-      "Practical training for institutions, teams, and decision makers.",
-    image: "/images/story/capacity-building.jpeg",
+      "A workshop session for the Livestock Services Transformation (LST) project.",
+    image: "/images/newimages/Workshop of the Livestock Services Transformation (LST) 3.jpg",
+    alt: "A speaker addressing attendees at the Livestock Services Transformation workshop",
+  },
+  {
+    title: "Public Service Commission Study Presentation",
+    description:
+      "A presentation on feasibility and associated studies for the Public Service Commission (PSC).",
+    image: "/images/newimages/Presentation on Feasibility and others accociated study of Public Service Commission  (PSC)  1.jpg",
+    alt: "Participants seated around a conference table during a Public Service Commission study presentation",
+  },
+  {
+    title: "Mongla Port Project Visit",
+    description:
+      "A group photograph from a project visit in Mongla.",
+    image: "/images/newimages/mongla_port_projects.jpg",
+    alt: "A group of visitors standing outside a building during the Mongla Port project visit",
   },
 ];
 
@@ -88,7 +87,7 @@ export const projectCategories = [
 export type ProjectCategory = (typeof projectCategories)[number];
 
 // Classification follows existing descriptions; original project fields stay intact.
-export const categorizedProjects = projects.map((project, index) => {
+export const categorizedProjects = projects.map((project) => {
   const categories: ProjectCategory[] = [];
   if (project.category === "Environmental Management")
     categories.push("Environmental Management");
@@ -107,7 +106,6 @@ export const categorizedProjects = projects.map((project, index) => {
   if (project.role === "Researcher") categories.push("Environmental Research");
   return {
     ...project,
-    image: projectImages[index],
     categories,
     kind: "Professional consulting / research assignment",
   };

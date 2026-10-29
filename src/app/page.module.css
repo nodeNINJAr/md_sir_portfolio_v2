@@ -21,7 +21,7 @@
     color 0.18s;
 }
 .page :is(a, button, summary, input, textarea):focus-visible {
-  outline: 3px solid var(--sage);
+  outline: 3px solid var(--color-focus);
   outline-offset: 4px;
 }
 .page h2 {
@@ -45,28 +45,28 @@
 }
 .section {
   padding-block: 90px;
-  background: #edf2e7;
+  background: var(--color-paper);
 }
 .creamSection {
-  background: linear-gradient(to bottom left, #dce7cf 0%, #f3f0e7 38%);
+  background: var(--color-paper);
 }
 .paleSection {
-  background: linear-gradient(to top right, #bfdcc8 0%, #e5eee5 42%);
+  background: linear-gradient(135deg, var(--color-sage), var(--color-paper));
 }
 .aboutSection {
-  background: linear-gradient(to bottom right, #dce8d3 0%, #f7f5ef 38%);
+  background: var(--color-surface);
 }
 .experienceSection {
-  background: linear-gradient(to top left, #dce5cf 0%, #f3f0e7 38%);
+  background: var(--color-paper);
 }
 .recognitionSection {
-  background: linear-gradient(to bottom left, #e4dcc2 0%, #f7f5ef 38%);
+  background: var(--color-surface);
 }
 .researchSection {
-  background: linear-gradient(to top right, #cce1d2 0%, #edf2eb 42%);
+  background: var(--color-paper);
 }
 .credentialsSection {
-  background: linear-gradient(to bottom right, #dee5cc 0%, #f3f0e7 38%);
+  background: var(--color-surface);
 }
 .sectionIntro {
   margin-bottom: 34px;
@@ -134,7 +134,7 @@
   align-items: center;
   min-height: 690px;
   color: #fff;
-  background: #263b31;
+  background: var(--color-ink);
 }
 .hero::after {
   position: absolute;
@@ -249,7 +249,7 @@
   position: relative;
   overflow: hidden;
   padding-block: 95px;
-  background: linear-gradient(to top left, #37654b 0%, #214c3b 45%);
+  background: linear-gradient(135deg, #234b38, var(--color-deep));
   color: #fff;
 }
 .statement h2 {
@@ -296,7 +296,7 @@
   min-width: 0;
   height: 100%;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .experienceCard {
   display: flex;
@@ -388,7 +388,7 @@
 }
 .projectCard > p:not(.smallText) {
   font-size: 16px;
-  color: #586258;
+  color: var(--color-muted);
 }
 .projectCard .details,
 .projectCard .textLink {
@@ -569,7 +569,7 @@
 .footer {
   padding-block: 25px;
   color: #edf2ea;
-  background: linear-gradient(to bottom right, #2c5039 0%, #173629 45%);
+  background: var(--color-deep);
   font-size: 13px;
 }
 .footer .container {
@@ -752,12 +752,12 @@
 
 /* Environmental identity: retain the existing structure and responsive gallery. */
 .page {
-  --green: #214c3b;
-  --green-dark: #173629;
-  --sage: #d5dfbd;
+  --green: var(--color-forest);
+  --green-dark: var(--color-deep);
+  --sage: var(--color-accent);
   --cream: #f5f2ea;
-  background: #fcfbf7;
-  color: #263b31;
+  background: var(--color-surface);
+  color: var(--color-ink);
 }
 .page h2 {
   font-family: var(--font-inter), Arial, sans-serif;
@@ -877,7 +877,7 @@
   font-size: 13px;
 }
 .statement {
-  background: linear-gradient(to top left, #37654b 0%, #214c3b 45%);
+  background: linear-gradient(135deg, #234b38, var(--color-deep));
 }
 .statement::after {
   display: none;
@@ -886,7 +886,7 @@
   color: #c4d6a410;
 }
 .initiativeSection {
-  background: linear-gradient(to top left, #bcd6ac 0%, #e8efdf 45%);
+  background: linear-gradient(135deg, var(--color-sage), var(--color-paper));
   border-block: 1px solid #c9d1ba;
 }
 .initiativeGrid {
@@ -941,13 +941,13 @@
 .initiativePartner h3 {
   font-size: 20px;
   font-weight: 400;
-  color: #214c3b;
+  color: var(--color-forest);
 }
 .initiativePartner p {
   margin-top: 12px;
   font-size: 16px;
   line-height: 1.75;
-  color: #536347;
+  color: var(--color-muted);
 }
 .initiativePartner .textLink {
   margin-top: 16px;
@@ -966,7 +966,7 @@
 }
 .initiativeFigure figcaption {
   font-size: 13px;
-  color: #536347;
+  color: var(--color-muted);
   margin-top: 15px;
 }
 .contentStatus {
@@ -977,7 +977,7 @@
   letter-spacing: 0.08em;
   border-top: 1px solid #a8b69a;
   padding-top: 15px;
-  color: #536347;
+  color: var(--color-muted);
 }
 .filters {
   display: flex;
@@ -987,20 +987,20 @@
 }
 .filters button {
   padding: 9px 14px;
-  border: 1px solid #a6b59a;
+  border: 1px solid var(--color-border);
   background: transparent;
   color: #334d33;
   cursor: pointer;
   font-size: 14px;
 }
 .filters button[aria-pressed="true"] {
-  background: #214c3b;
+  background: var(--color-forest);
   color: #fff;
-  border-color: #214c3b;
+  border-color: var(--color-forest);
 }
 .filters button:hover {
-  background: #d5dfbd;
-  color: #173629;
+  background: var(--color-accent);
+  color: var(--color-deep);
 }
 .resultCount {
   font-size: 14px;
@@ -1008,9 +1008,9 @@
   margin-bottom: 28px;
 }
 .projectCard {
-  border: 1px solid #d7dccd;
-  border-radius: 2px;
-  background: #fcfbf7;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
 }
 .projectCard:nth-child(3n + 2) {
   background: #ecefdf;
@@ -1057,7 +1057,7 @@
 }
 .details summary {
   color: #254d31;
-  background: #dce5cc;
+  background: var(--color-sage);
 }
 .details[open] summary {
   margin-bottom: 12px;
@@ -1100,7 +1100,7 @@
   margin-top: 0;
 }
 .leadershipSection {
-  background: linear-gradient(to bottom right, #37654b 0%, #214c3b 45%);
+  background: linear-gradient(135deg, #234b38, var(--color-deep));
   color: #e8eddf;
 }
 .leadershipGrid {
@@ -1114,7 +1114,7 @@
   margin-bottom: 20px;
 }
 .leadershipGrid h2 {
-  color: #fcfbf7;
+  color: var(--color-surface);
 }
 .leadershipIntro {
   color: #d6dfcb;
@@ -1151,7 +1151,7 @@
   line-height: 1.8;
 }
 .bpsSection {
-  background: linear-gradient(to bottom left, #c9dfbf 0%, #edf2e8 42%);
+  background: var(--color-paper);
   border-bottom: 1px solid #214c3b18;
 }
 .bpsRole {
@@ -1173,7 +1173,7 @@
   margin-top: 18px;
   font-size: clamp(44px, 5vw, 72px);
   font-weight: 400;
-  color: #214c3b;
+  color: var(--color-forest);
   letter-spacing: -0.035em;
 }
 .bpsOrganization {
@@ -1243,7 +1243,7 @@
   font-family: var(--font-inter), Arial, sans-serif;
   font-weight: 400;
   font-size: 28px;
-  color: #214c3b;
+  color: var(--color-forest);
   margin-bottom: 18px;
 }
 .publicationRow {
@@ -1275,7 +1275,7 @@
   font-size: 14px;
 }
 .footer {
-  background: linear-gradient(to bottom right, #2c5039 0%, #173629 45%);
+  background: var(--color-deep);
 }
 @media (max-width: 1199px) {
   .mobileBrand {
@@ -1310,7 +1310,7 @@
     z-index: 30;
     padding: 25px;
     border: 1px solid #ffffff30;
-    background: #173629;
+    background: var(--color-deep);
     box-shadow: 0 10px 30px #0003;
   }
   .navigationOpen {
@@ -1456,7 +1456,7 @@
   gap: 45px;
   margin-bottom: 45px;
   padding: 30px;
-  border-left: 3px solid #214c3b;
+  border-left: 3px solid var(--color-forest);
   background: #e9eddf;
 }
 .currentLeadership h3 {
@@ -1479,7 +1479,7 @@
   min-width: 0;
   padding: 20px;
   background: #fff;
-  border: 1px solid #d7dccd;
+  border: 1px solid var(--color-border);
   border-radius: 5px;
 }
 .youthCard:nth-child(even) {
@@ -1490,7 +1490,7 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 1.4;
-  color: #214c3b;
+  color: var(--color-forest);
 }
 .youthCard .textLink {
   margin-top: 20px;
@@ -1503,7 +1503,7 @@
 .youthSubsection h3 {
   font-size: 28px;
   font-weight: 400;
-  color: #214c3b;
+  color: var(--color-forest);
 }
 .youthImage {
   display: block;
@@ -1518,7 +1518,7 @@
   gap: 16px;
   padding: 18px 0;
   border-bottom: 1px solid #214c3b25;
-  color: #214c3b;
+  color: var(--color-forest);
   font-size: 16px;
 }
 .youthGallery figcaption svg {
@@ -1573,36 +1573,36 @@
     min-height: 48px;
     padding: 12px 20px;
     background: #edf4e9;
-    color: #214c3b;
+    color: var(--color-forest);
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
   }
   .mobileSectionLinks a[aria-current="location"] {
-    background: #6ac774;
+    background: var(--color-focus);
     color: #102b17;
   }
   .mobileSectionLinks a:focus-visible {
-    outline: 2px solid #6ac774;
+    outline: 2px solid var(--color-focus);
     outline-offset: -3px;
   }
 }
 
 /* Editorial section system, aligned with the environmental hero. */
 .section {
-  padding-block: clamp(72px, 8vw, 128px);
+  padding-block: clamp(64px, 7vw, 104px);
 }
 .sectionIntro {
   max-width: 1000px;
   margin-bottom: 48px;
 }
 .page .headingAccent {
-  color: #4a8655;
+  color: var(--color-focus);
 }
 .page h2 {
-  font-size: clamp(36px, 4.1vw, 64px);
+  font-size: clamp(32px, 3.6vw, 52px);
   font-weight: 500;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   line-height: 1.13;
   text-wrap: balance;
 }
@@ -1628,7 +1628,7 @@
   content: "";
   width: 28px;
   height: 2px;
-  background: #6ac774;
+  background: var(--color-focus);
   flex-shrink: 0;
 }
 .sectionIntro .eyebrow,
@@ -1637,7 +1637,7 @@
 }
 .button {
   min-height: 50px;
-  border-radius: 999px;
+  border-radius: 6px;
   padding: 13px 24px;
   font-size: 14px;
   font-weight: 600;
@@ -1657,13 +1657,13 @@
   align-items: center;
 }
 .portrait {
-  border-radius: 160px 160px 6px 6px;
+  border-radius: 12px;
   aspect-ratio: 4 / 5;
   min-height: 0;
-  box-shadow: 18px 18px 0 #dce8d3;
+  box-shadow: var(--shadow-card);
 }
 .aboutCopy h2 {
-  font-size: clamp(34px, 3.5vw, 54px);
+  font-size: clamp(32px, 3.1vw, 48px);
 }
 .aboutCopy > p:not(.eyebrow) {
   font-size: 16px;
@@ -1686,7 +1686,7 @@
 .statement .container {
   position: relative;
   padding-left: 44px;
-  border-left: 2px solid #b6dc83;
+  border-left: 2px solid var(--color-accent);
 }
 .statement h2 {
   font-size: 12px;
@@ -1711,15 +1711,15 @@
   padding-left: 0;
 }
 .bpsRole h2 {
-  font-size: clamp(48px, 6vw, 88px);
-  color: #214c3b;
+  font-size: clamp(44px, 5vw, 68px);
+  color: var(--color-forest);
 }
 .bpsOrganization {
   font-size: clamp(23px, 2.4vw, 34px);
 }
 .bpsAnnouncement {
   padding: 10px;
-  box-shadow: 12px 12px 0 #c6dcbb;
+  box-shadow: var(--shadow-card);
   border: 1px solid #d1ddc7;
 }
 .leadershipSection {
@@ -1733,7 +1733,7 @@
   font-size: clamp(32px, 3.2vw, 48px);
 }
 .leadershipSection .headingAccent {
-  color: #b6dc83;
+  color: var(--color-accent);
 }
 .leadershipIntro {
   font-size: 16px;
@@ -1742,7 +1742,7 @@
 .leadershipRole {
   padding: 30px 34px;
   border: 1px solid #bdd5b547;
-  border-top: 3px solid #b6dc83;
+  border-top: 3px solid var(--color-accent);
   background: #102d2238;
 }
 .term {
@@ -1757,9 +1757,10 @@
   letter-spacing: -0.035em;
 }
 .leadershipRole h3 span {
-  font-size: 20px;
-  color: #b6dc83;
-  letter-spacing: 0.12em;
+  font-size: 18px;
+  color: var(--color-accent);
+  letter-spacing: 0;
+  line-height: 1.6;
 }
 .leadershipRole > p:last-child {
   font-size: 16px;
@@ -1774,7 +1775,7 @@
   margin-bottom: 22px;
 }
 .initiativeHeader h2 {
-  font-size: clamp(46px, 6vw, 86px);
+  font-size: clamp(40px, 5vw, 68px);
 }
 .initiativeHeader > .button {
   flex-shrink: 0;
@@ -1807,7 +1808,7 @@
   margin: 0;
   padding: 30px;
   border: 1px solid #adc59b;
-  border-left: 3px solid #4a8655;
+  border-left: 3px solid var(--color-focus);
   background: #f5f7ec80;
 }
 .initiativePartner h3 {
@@ -1881,13 +1882,13 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #4a8655;
+  background: var(--color-focus);
 }
 .currentLeadership {
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 36px;
-  background: #dfe9d5;
-  border-left-color: #4a8655;
+  background: var(--color-sage);
+  border-left-color: var(--color-focus);
 }
 .currentLeadership h3 {
   font-size: clamp(28px, 3vw, 40px);
@@ -1911,7 +1912,7 @@
 .details summary {
   padding: 12px 16px;
   border-radius: 3px;
-  background: #dfe9d5;
+  background: var(--color-sage);
   min-height: 44px;
 }
 .details[open] summary {
@@ -1924,18 +1925,19 @@
   align-items: start;
 }
 .projectImageNote {
-  color: #596b50;
+  color: var(--color-muted);
   font-size: 12px;
   margin: 18px 0 10px;
 }
 .projectCard {
   padding: 26px;
-  border-radius: 4px;
-  background: #f9f9f1;
-  border-color: #cbd6be;
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-border);
 }
 .projectCard:nth-child(3n + 2) {
-  background: #f9f9f1;
+  background: var(--color-surface);
 }
 .projectCard .cardImage {
   margin: -26px -26px 24px;
@@ -1948,13 +1950,13 @@
   letter-spacing: -0.025em;
 }
 .projectCard .projectCategory {
-  color: #497544;
+  color: var(--color-focus);
   font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.12em;
 }
 .projectMeta {
-  border-block: 1px solid #dbe2d0;
+  border-block: 1px solid var(--color-border);
   padding-block: 12px;
 }
 .filters {
@@ -2003,10 +2005,11 @@
 }
 .expertiseCard {
   padding: 28px;
-  border: 1px solid #bccfb5;
-  border-top: 3px solid #6f9d64;
-  background: #f4f7eb;
-  border-radius: 3px;
+  border: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-focus);
+  box-shadow: var(--shadow-card);
+  background: var(--color-surface);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -2044,7 +2047,7 @@
   padding-top: 22px;
   font-size: 24px;
   line-height: 1.4;
-  border-top: 2px solid #6f9d64;
+  border-top: 2px solid var(--color-focus);
 }
 .publicationRow {
   grid-template-columns: 55px 1fr;
@@ -2057,7 +2060,7 @@
 }
 .publicationRow .publicationYear {
   padding: 5px 0;
-  border: 1px solid #c2d4bb;
+  border: 1px solid var(--color-border);
   border-radius: 3px;
   text-align: center;
   font-size: 12px;
@@ -2084,19 +2087,30 @@
 }
 .videoGrid iframe {
   border-radius: 4px;
-  box-shadow: 10px 10px 0 #d6e1cb;
+  box-shadow: var(--shadow-card);
 }
 .researchCard {
   padding: 28px;
-  border: 1px solid #c7d3ba;
-  border-top: 3px solid #769a64;
-  background: #f6f6ec;
-  border-radius: 3px;
+  border: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-focus);
+  box-shadow: var(--shadow-card);
+  background: var(--color-surface);
+  border-radius: 10px;
 }
-.credentialIndex {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: #668457;
+.educationGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+@media (max-width: 639px) {
+  .educationGrid { grid-template-columns: 1fr; }
+}
+.educationLogo {
+  display: block;
+  width: 176px;
+  max-width: 100%;
+  height: 88px;
+  object-fit: contain;
+  object-position: left center;
   margin-bottom: 24px;
 }
 .researchCard h3 {
@@ -2109,7 +2123,7 @@
   line-height: 1.8;
 }
 .credentialsGrid {
-  border-top: 1px solid #bdcbb0;
+  border-top: 1px solid var(--color-border);
   padding-top: 36px;
 }
 .credentialsGrid h3 {
@@ -2124,7 +2138,7 @@
   gap: 80px;
 }
 .contactGrid h2 {
-  font-size: clamp(48px, 6vw, 86px);
+  font-size: clamp(40px, 5vw, 68px);
 }
 .contactGrid > div > .eyebrow {
   margin-bottom: 22px;
@@ -2136,23 +2150,23 @@
 }
 .contactDetails {
   padding-block: 22px;
-  border-block: 1px solid #b9ccb3;
+  border-block: 1px solid var(--color-border);
   font-size: 16px;
 }
 .contactDetails svg {
   width: 38px;
   height: 38px;
   padding: 9px;
-  border: 1px solid #b9ccb3;
+  border: 1px solid var(--color-border);
   border-radius: 50%;
 }
 .contactForm {
   padding: 32px;
-  background: #f6f8ed;
-  border: 1px solid #bdcfb3;
-  border-top: 3px solid #6ac774;
-  border-radius: 4px;
-  box-shadow: 10px 10px 0 #c9dec2;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-focus);
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
 }
 .contactForm input,
 .contactForm textarea {
@@ -2218,8 +2232,8 @@
   }
   .portrait {
     max-width: 460px;
-    width: calc(100% - 12px);
-    box-shadow: 10px 10px 0 #dce8d3;
+    width: 100%;
+    box-shadow: var(--shadow-card);
   }
   .statement {
     padding-block: 52px;
@@ -2237,8 +2251,8 @@
     font-size: 52px;
   }
   .bpsAnnouncement {
-    width: calc(100% - 10px);
-    box-shadow: 8px 8px 0 #c6dcbb;
+    width: 100%;
+    box-shadow: var(--shadow-card);
   }
   .leadershipRole {
     padding: 24px;
@@ -2330,8 +2344,8 @@
   }
   .contactForm {
     padding: 24px;
-    width: calc(100% - 8px);
-    box-shadow: 8px 8px 0 #c9dec2;
+    width: 100%;
+    box-shadow: var(--shadow-card);
   }
 }
 

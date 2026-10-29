@@ -70,7 +70,7 @@ export function Engagements() {
             <div className={styles.image}>
               <Image
                 src={item.image}
-                alt={item.title}
+                alt={item.alt}
                 fill
                 sizes="(min-width: 1440px) 460px, (min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
                 className={pageStyles.coverImage}

@@ -1,0 +1,45 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  color: var(--color-accent);
+}
+.parallax {
+  position: absolute;
+  width: var(--leaf-size);
+  height: var(--leaf-size);
+  transform: translate3d(calc(var(--hero-scroll, 0px) * var(--leaf-sway)), calc(var(--hero-scroll, 0px) * var(--leaf-depth)), 0);
+}
+.impulse { display: block; width: 100%; height: 100%; }
+.parallax:nth-child(1) { left: 1%; top: 27%; }
+.parallax:nth-child(2) { left: 45%; top: 16%; }
+.parallax:nth-child(3) { left: 46%; top: 77%; }
+.parallax:nth-child(4) { left: 8%; top: 93%; }
+.parallax:nth-child(5) { left: 97%; top: 63%; }
+.leaf {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  opacity: .36;
+  transform: rotate(var(--leaf-angle));
+  animation: drift var(--leaf-duration) ease-in-out var(--leaf-delay) infinite alternate;
+}
+.blade { fill: #78985b; fill-opacity: .23; }
+.vein, .edge { stroke: #d7e8bc; stroke-opacity: .68; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.vein { stroke-width: 1.45; }
+.veinSoft { stroke: #d7e8bc; stroke-opacity: .46; stroke-width: .9; stroke-linecap: round; }
+@keyframes drift {
+  0% { transform: translate(-4px, 4px) rotate(var(--leaf-angle)); }
+  50% { transform: translate(5px, -8px) rotate(calc(var(--leaf-angle) + 12deg)); }
+  100% { transform: translate(-3px, -15px) rotate(calc(var(--leaf-angle) - 8deg)); }
+}
+@media (max-width: 767px) {
+  .parallax:nth-child(2), .parallax:nth-child(3) { display: none; }
+  .parallax:first-child { left: 86%; top: 22%; }
+  .leaf { opacity: .27; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .parallax { transform: none; }
+  .leaf { animation: none; }
+}

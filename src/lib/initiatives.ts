@@ -48,9 +48,14 @@ export const plantScholarPhotos = [
     caption: "Signing the agreement",
   },
   {
-    src: "/images/plantscholar/3.jpeg",
-    alt: "Attendees gathered around representatives signing PlantScholar documents",
-    caption: "The signing session with attendees",
+    src: "/images/newimages/International Announcement of Plant Scholar 1.jpg",
+    alt: "A speaker presenting PlantScholar beside a projected slide at an international event",
+    caption: "International announcement of PlantScholar",
+  },
+  {
+    src: "/images/newimages/International Announcement of Plant Scholar2.jpg",
+    alt: "Participants gathered for a group photograph at the international PlantScholar announcement",
+    caption: "Participants at the international announcement",
   },
 ];
 
@@ -89,8 +94,8 @@ export const bpsLeadership = {
 
 // Role and representation description supplied by the portfolio owner.
 export const leadership = {
-  organization: "BMDF",
-  role: "Vice President",
+  organization: "BMDF (Bangladesh Migration Development Forum)",
+  role: "Senior Vice President",
   committee: "BMDF Executive Committee",
   term: "2026–2029",
   description:

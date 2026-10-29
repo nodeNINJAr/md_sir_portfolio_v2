@@ -14,7 +14,9 @@ export const site = {
 export const navLinks = [
   { label: "Home", href: "#summary" },
   { label: "About", href: "#about" },
+  { label: "Programmes", href: "/programmes" },
   { label: "Environmental Work", href: "#projects" },
+  { label: "Education", href: "#credentials" },
   { label: "PlantScholar", href: "#plantscholar" },
   { label: "Experience", href: "#experience" },
   { label: "BMDF", href: "#bmdf" },
@@ -317,12 +319,6 @@ export const caseStudies = [
 
 export const journey = [
   {
-    period: "March 2025 — Present",
-    organization: "Palli Karma-Sahayak Foundation (PKSF)",
-    role: "Technical Member",
-    note: "Carbon Credit Mechanism Development in Bangladesh",
-  },
-  {
     period: "January 2015 — Present",
     organization: "Sustainable Research & Consultancy Ltd.",
     role: "Environmental Specialist / Senior Environmental Expert / National Policy Expert",
@@ -431,14 +427,28 @@ export const education = [
   {
     degree: "PhD Fellow in Environmental Management",
     institution: "Cyberjaya University, Malaysia",
+    logo: "/images/organizations/cyberjaya-university.png",
+    flag : "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg",
   },
   {
     degree: "M.Sc. in Water Resources Development",
     institution: "Institute of Water and Flood Management (IWFM), BUET",
+    logo: "/images/organizations/buet.svg",
+    flag : "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg",
   },
   {
     degree: "B.Sc. in Environmental Science",
     institution: "Khulna University",
+    logo: "/images/organizations/khulna-university.png",
+    flag : "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg",
+  },
+
+
+    {
+    degree: "Phd Fellow in Environmental Management",
+    institution: "Saga University, Japan",
+    logo: "/images/organizations/saga-university.gif",
+    flag : "https://upload.wikimedia.org/wikipedia/en/4/4f/Flag_of_Japan.svg",
   },
 ];
 

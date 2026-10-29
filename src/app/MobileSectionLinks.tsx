@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 const links = [
   { id: "bps", label: "BPS" },
   { id: "bmdf", label: "BMDF" },
+  { id: "programmes", label: "Programmes" },
   { id: "about", label: "About" },
   { id: "plantscholar", label: "PlantScholar" },
   { id: "experience", label: "Experience" },
